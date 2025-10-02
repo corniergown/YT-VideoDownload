@@ -10,25 +10,43 @@ Video Downloader is a Python application that allows users to download videos, p
 Before you begin, ensure you have Python installed on you machine [Python Download Page](https://www.python.org/downloads/)
 
 
-## Step 1: Install dependencies
+## Step 1: Install dependencies using a virtual environment
 
-#### For Arch Linux Users
-
-```bash
-sudo pacman -S yt-dlp
-```
-
-#### For Other Linux Users
+**For arch linux users and derivates**
 
 ```bash
-sudo pip install yt-dlp
-```
-
-#### For Windows Bugs Users
-
-```bash
+pacman -S python3-venv
+python -m venv .venv
+source .venv/bin/activate
 pip install yt-dlp
 ```
+
+
+**For debian linux users and derivates**
+
+```bash
+sudo apt install python3 python3-venv
+python -m venv .venv
+source .venv/bin/activate
+pip install yt-dlp
+```
+
+**For windows users**
+
+Fist you need install the **Python** downloader **[here](https://www.python.org/downloads/)**
+During the installation check this:
+* "Add Python to PATH"
+* Choose _"Customize installation"_ and make sure _"venv"_ is selected
+
+Create a virutal environment
+```powershell
+py -m venv .venv
+.venv\Scripts\activate
+pip install yt-dlp
+```
+
+> To deactivate the virtual environment for any OS use **"deactivate"**
+
 
 ## Step 2: Clone repository
 
@@ -43,7 +61,7 @@ cd YT-VideoDownload
 
 To run the Video Downloader, navigate to the project directory and run the following command.
 
-`python3 src/main.py`
+`python3 main.py`
 
 ### Image
 
